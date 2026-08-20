@@ -1,0 +1,75 @@
+{
+  "project": {
+    "name": "Pesseghini & Doniani Advocacia",
+    "displayName": "Pesseghini & Doniani",
+    "conversionAction": "Atendimento jurídico",
+    "slug": "pesseghini-doniani",
+    "sourceTemplate": "Template 2",
+    "sourceVersion": "1.2.0"
+  },
+  "professional": {
+    "name": "Pesseghini & Doniani",
+    "officeName": "Pesseghini & Doniani Advocacia",
+    "oab": "Enviar depois",
+    "area": "Direito de Família e Patrimônio",
+    "city": "Enviar depois",
+    "biography": "Assessoria jurídica para decisões familiares que envolvem patrimônio e relações pessoais."
+  },
+  "contact": {
+    "whatsapp": "",
+    "whatsappMessage": "Olá! Vim pelo site Pesseghini & Doniani e gostaria de analisar meu caso.",
+    "email": "",
+    "linkedin": ""
+  },
+  "location": {
+    "city": "Enviar depois",
+    "regions": "Enviar depois",
+    "address": "",
+    "hours": "Atendimento mediante agendamento",
+    "mapsQuery": ""
+  },
+  "theme": {
+    "primary": "#D8B766",
+    "secondary": "#2E3F2F",
+    "style": "Editorial premium"
+  },
+  "hero": {
+    "title": "Vai se divorciar e existe patrimônio envolvido?",
+    "description": "Imóveis, empresas, investimentos e filhos podem tornar a separação mais complexa. Entenda sua situação antes de tomar decisões.",
+    "cta": "Quero analisar meu caso"
+  },
+  "audience": "Pessoas que enfrentam questões familiares com reflexos patrimoniais",
+  "services": [
+    {
+      "title": "Divórcio com patrimônio",
+      "description": "Orientação quando a separação envolve imóveis, veículos, investimentos, empresas ou outros bens."
+    },
+    {
+      "title": "Empresa ou participação societária",
+      "description": "Análise de empresas, sociedades, patrimônio empresarial e seus possíveis reflexos jurídicos."
+    },
+    {
+      "title": "Partilha de bens",
+      "description": "Organização e análise da divisão do patrimônio, considerando documentos, regime de bens e particularidades do caso."
+    },
+    {
+      "title": "Filhos e guarda",
+      "description": "Orientação sobre guarda, convivência e responsabilidades parentais durante e após a separação."
+    },
+    {
+      "title": "Pensão alimentícia",
+      "description": "Análise para definição, revisão ou cumprimento da pensão, conforme a realidade familiar."
+    }
+  ],
+  "assets": "Marca oficial e fotografias fornecidas pela equipe",
+  "approval": {
+    "responsible": "Responsável a definir",
+    "approved": false
+  },
+  "pending": [
+    "Informar números de OAB",
+    "Informar WhatsApp e demais contatos",
+    "Informar cidade ou regiões atendidas",
+    "Aprovar o conteúdo final antes da publicação"
+  ]
+}
