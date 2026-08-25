@@ -1,4 +1,6 @@
 import logo from "../../assets/logo.png";
+import { phoneLabel } from "../../config/project.data";
+import { whatsappUrl } from "../../config/template.config";
 
 export function Footer() {
   return (
@@ -17,8 +19,9 @@ export function Footer() {
         </nav>
       </div>
       <div className="container footer-registration">
-        <span>OAB: <strong>Enviar depois</strong></span>
-        <span>Contato e regiões atendidas: <strong>Enviar depois</strong></span>
+        <span>Adriana Pesseghini: <strong>OAB/SP 156.135</strong></span>
+        <span>Maura P. P. Doniani: <strong>OAB/SP 252.557</strong></span>
+        <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">WhatsApp: <strong>{phoneLabel}</strong></a>
       </div>
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} Pesseghini & Doniani Advocacia.</span>

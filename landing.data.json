@@ -10,13 +10,13 @@
   "professional": {
     "name": "Pesseghini & Doniani",
     "officeName": "Pesseghini & Doniani Advocacia",
-    "oab": "Enviar depois",
+    "oab": "Adriana OAB/SP 156.135 · Maura OAB/SP 252.557",
     "area": "Direito de Família e Patrimônio",
     "city": "Enviar depois",
     "biography": "Assessoria jurídica para decisões familiares que envolvem patrimônio e relações pessoais."
   },
   "contact": {
-    "whatsapp": "",
+    "whatsapp": "5511947219344",
     "whatsappMessage": "Olá! Vim pelo site Pesseghini & Doniani e gostaria de analisar meu caso.",
     "email": "",
     "linkedin": ""
@@ -34,31 +34,35 @@
     "style": "Editorial premium"
   },
   "hero": {
-    "title": "Vai se divorciar e existe patrimônio envolvido?",
-    "description": "Imóveis, empresas, investimentos e filhos podem tornar a separação mais complexa. Entenda sua situação antes de tomar decisões.",
+    "title": "Quando família, filhos e patrimônio estão envolvidos, não é fácil saber o que fazer",
+    "description": "Divórcio, guarda, alimentos, união estável, partilha e inventário envolvem decisões importantes. Entenda seus direitos e os caminhos jurídicos possíveis antes de decidir o próximo passo.",
     "cta": "Quero analisar meu caso"
   },
   "audience": "Pessoas que enfrentam questões familiares com reflexos patrimoniais",
   "services": [
     {
-      "title": "Divórcio com patrimônio",
-      "description": "Orientação quando a separação envolve imóveis, veículos, investimentos, empresas ou outros bens."
+      "title": "Divórcio e dissolução de união estável",
+      "description": "Orientação em divórcios consensuais e litigiosos, dissolução de união estável e definição dos efeitos pessoais e patrimoniais."
     },
     {
-      "title": "Empresa ou participação societária",
-      "description": "Análise de empresas, sociedades, patrimônio empresarial e seus possíveis reflexos jurídicos."
+      "title": "Partilha de bens e patrimônio",
+      "description": "Organização e análise da divisão de imóveis, investimentos, empresas, participações societárias e outros bens."
     },
     {
-      "title": "Partilha de bens",
-      "description": "Organização e análise da divisão do patrimônio, considerando documentos, regime de bens e particularidades do caso."
-    },
-    {
-      "title": "Filhos e guarda",
-      "description": "Orientação sobre guarda, convivência e responsabilidades parentais durante e após a separação."
+      "title": "Guarda e convivência",
+      "description": "Orientação sobre guarda, regime de convivência e responsabilidades parentais, considerando as particularidades de cada família."
     },
     {
       "title": "Pensão alimentícia",
-      "description": "Análise para definição, revisão ou cumprimento da pensão, conforme a realidade familiar."
+      "description": "Fixação, revisão, exoneração e cobrança de alimentos, conforme a realidade e as necessidades envolvidas."
+    },
+    {
+      "title": "Inventário e sucessões",
+      "description": "Orientação e acompanhamento em inventários judiciais e extrajudiciais, partilha de bens e demais questões sucessórias."
+    },
+    {
+      "title": "Planejamento e questões patrimoniais familiares",
+      "description": "Análise de situações em que patrimônio, empresas e relações familiares se conectam, buscando organização e segurança jurídica."
     }
   ],
   "assets": "Marca oficial e fotografias fornecidas pela equipe",
@@ -67,8 +71,7 @@
     "approved": false
   },
   "pending": [
-    "Informar números de OAB",
-    "Informar WhatsApp e demais contatos",
+    "Informar demais contatos",
     "Informar cidade ou regiões atendidas",
     "Aprovar o conteúdo final antes da publicação"
   ]

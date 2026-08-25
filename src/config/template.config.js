@@ -14,24 +14,28 @@ export const templateConfig = {
   pending: projectData.pending,
   faqs: [
     {
-      question: "Meu divórcio envolve imóveis e outros bens. Posso buscar orientação?",
-      answer: "Sim. A análise considera a situação patrimonial, os documentos disponíveis, o regime de bens e as particularidades da família para indicar os caminhos juridicamente possíveis."
+      question: "Preciso estar decidido(a) a me divorciar para buscar orientação?",
+      answer: "Não. A orientação jurídica pode ajudar a compreender seus direitos, os possíveis impactos da separação e os caminhos disponíveis antes de qualquer decisão."
     },
     {
-      question: "E se houver uma empresa envolvida?",
-      answer: "Empresas e participações societárias exigem análise específica. É importante compreender a estrutura do negócio, a documentação e a relação entre patrimônio pessoal e empresarial."
+      question: "Meu divórcio envolve imóveis, empresas ou outros bens. Como funciona a partilha?",
+      answer: "A partilha depende, entre outros fatores, do regime de bens, da origem e da titularidade do patrimônio e das particularidades de cada situação. A análise prévia permite compreender o que pode integrar a divisão e quais caminhos jurídicos são possíveis."
     },
     {
-      question: "Preciso estar decidido a me divorciar para buscar orientação?",
-      answer: "Não. A orientação jurídica pode ajudar a compreender direitos, riscos e possibilidades antes de qualquer decisão."
+      question: "Como ficam a guarda, a convivência e as decisões sobre os filhos após a separação?",
+      answer: "Essas questões são analisadas considerando a realidade familiar e, sobretudo, o melhor interesse da criança ou do adolescente. Guarda, convivência e responsabilidades parentais podem ser definidas por acordo ou, quando necessário, judicialmente."
     },
     {
-      question: "O atendimento também pode envolver questões relacionadas aos filhos?",
-      answer: "Sim. Guarda, convivência, responsabilidades parentais e pensão podem ser analisadas em conjunto com os demais aspectos da separação."
+      question: "Posso pedir, revisar ou cobrar pensão alimentícia?",
+      answer: "Sim. Dependendo da situação, é possível discutir a fixação, revisão, exoneração ou cobrança de alimentos. Cada medida exige a análise das circunstâncias e dos documentos do caso."
     },
     {
-      question: "Existe garantia de resultado?",
-      answer: "Não. Cada caso depende de suas circunstâncias, dos documentos, da legislação aplicável e das decisões das autoridades competentes."
+      question: "Como funciona o inventário e ele pode ser feito em cartório?",
+      answer: "O inventário permite apurar os bens, direitos e obrigações deixados pela pessoa falecida e realizar a partilha e a transmissão aos herdeiros. Dependendo das circunstâncias do caso e do preenchimento dos requisitos legais, o procedimento poderá ser realizado judicialmente ou em cartório."
+    },
+    {
+      question: "É possível resolver questões de família sem entrar com uma ação?",
+      answer: "Em determinadas situações, sim. Acordos e procedimentos extrajudiciais podem ser alternativas mais adequadas. A possibilidade depende do caso e deve ser avaliada antes da definição da estratégia."
     }
   ]
 };

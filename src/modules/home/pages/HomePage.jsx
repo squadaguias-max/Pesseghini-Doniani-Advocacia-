@@ -4,24 +4,26 @@ import {
   Building2,
   Check,
   FileSearch,
+  HandCoins,
   HeartHandshake,
-  Home,
   Landmark,
+  MessageCircle,
   MessageSquareText,
   Scale,
   SearchCheck,
   ShieldCheck,
   Users
 } from "lucide-react";
-import { templateConfig as site } from "../../../config/template.config";
+import { templateConfig as site, whatsappUrl } from "../../../config/template.config";
+import { phoneLabel } from "../../../config/project.data";
 
-const serviceIcons = [Landmark, Building2, Scale, Users, HeartHandshake];
+const serviceIcons = [Scale, Building2, Users, HandCoins, Landmark, HeartHandshake];
 
 const process = [
   {
     icon: MessageSquareText,
     title: "Você apresenta sua situação",
-    text: "A conversa inicial ajuda a compreender o contexto familiar, patrimonial e pessoal."
+    text: "Na conversa inicial, buscamos compreender o que está acontecendo, suas principais dúvidas e o que precisa ser resolvido."
   },
   {
     icon: FileSearch,
@@ -42,10 +44,10 @@ export function HomePage() {
         <div className="hero-shade" />
         <div className="container hero-content">
           <span className="eyebrow eyebrow-light">Direito de família e patrimônio</span>
-          <h1>Vai se divorciar e existe <em>patrimônio envolvido?</em></h1>
+          <h1>Quando família, filhos e patrimônio estão envolvidos, <em>não é fácil saber o que fazer.</em></h1>
           <p>{site.hero.description}</p>
           <div className="hero-actions">
-            <a className="button button-gold" href="#atendimento">
+            <a className="button button-gold" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
               {site.hero.cta} <ArrowRight aria-hidden="true" />
             </a>
             <a className="text-link light-link" href="#atuacao">Entenda como podemos orientar</a>
@@ -58,14 +60,14 @@ export function HomePage() {
         <div className="container opening-grid">
           <div className="opening-copy">
             <span className="eyebrow">Antes de decidir</span>
-            <h2>Quando uma questão familiar envolve patrimônio, <em>cada detalhe importa.</em></h2>
-            <p>Imóveis, empresas, investimentos, contas e contratos podem produzir efeitos importantes durante uma separação. A análise precisa considerar o conjunto da situação — não apenas um documento isolado.</p>
-            <a className="button button-dark" href="#atendimento">Quero analisar meu caso <ArrowRight aria-hidden="true" /></a>
+            <h2>Em questões de família, uma decisão tomada hoje <em>pode ter efeitos por muito tempo.</em></h2>
+            <p>Filhos, patrimônio, alimentos, moradia e relações construídas ao longo dos anos podem estar envolvidos em uma mesma situação. Por isso, antes de agir, é importante compreender seus direitos, os riscos e os caminhos jurídicos possíveis.</p>
+            <a className="button button-dark" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">Quero analisar meu caso <ArrowRight aria-hidden="true" /></a>
           </div>
-          <div className="opening-visual" role="img" aria-label="Pessoa retirando uma aliança durante uma conversa reservada">
+          <div className="opening-visual" role="img" aria-label="Pessoa organizando documentos com calma em um ambiente profissional">
             <div className="visual-caption">
               <ShieldCheck aria-hidden="true" />
-              <span><strong>Orientação individualizada</strong> para decisões pessoais e patrimoniais.</span>
+              <span><strong>Orientação individualizada</strong> para decisões familiares e patrimoniais.</span>
             </div>
           </div>
         </div>
@@ -76,9 +78,9 @@ export function HomePage() {
           <div className="section-heading">
             <div>
               <span className="eyebrow eyebrow-light">Como podemos orientar</span>
-              <h2>Questões familiares com <em>reflexos patrimoniais.</em></h2>
+              <h2>Questões familiares exigem <em>orientação jurídica em cada etapa.</em></h2>
             </div>
-            <p>Atuação jurídica voltada à compreensão do cenário, organização das informações e definição dos caminhos possíveis.</p>
+            <p>Atuação jurídica voltada à compreensão do cenário, organização das informações e definição dos caminhos possíveis para cada situação familiar e patrimonial.</p>
           </div>
           <div className="service-grid">
             {site.services.map((service, index) => (
@@ -86,7 +88,7 @@ export function HomePage() {
                 <span className="service-icon">{createElement(serviceIcons[index] || Scale)}</span>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <a href="#atendimento" aria-label={`Solicitar análise sobre ${service.title}`}>Solicitar análise <ArrowRight aria-hidden="true" /></a>
+                <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" aria-label={`Solicitar análise sobre ${service.title}`}>Solicitar análise <ArrowRight aria-hidden="true" /></a>
               </article>
             ))}
           </div>
@@ -95,14 +97,15 @@ export function HomePage() {
 
       <section className="institutional">
         <div className="container institutional-grid">
-          <div className="institutional-photo" role="img" aria-label="Atendimento jurídico em ambiente profissional" />
+          <div className="institutional-photo" role="img" aria-label="Adriana Pesseghini e Maura Priscila Philippo Doniani juntas" />
           <div className="institutional-copy">
             <span className="eyebrow">Pesseghini & Doniani Advocacia</span>
-            <h2>Estratégia jurídica, proximidade e clareza para decisões que impactam sua vida e seu patrimônio.</h2>
-            <p>O escritório nasceu da união de duas advogadas com trajetórias complementares e da convicção de que nenhum caso é apenas um número.</p>
-            <p>Antes de definir uma estratégia, buscamos compreender o contexto, os documentos, os riscos e as possibilidades. A atuação é conduzida com transparência, proximidade e responsabilidade.</p>
-            <p>Em questões familiares que envolvem patrimônio, empresas, imóveis ou filhos, conhecimento jurídico, estratégia e sensibilidade precisam caminhar juntos.</p>
-            <div className="signature-line">Advocacia próxima no atendimento. Estratégica nas decisões. Responsável na condução.</div>
+            <h2>Duas trajetórias, uma mesma forma de entender a advocacia.</h2>
+            <p>A Pesseghini & Doniani nasceu da união das advogadas Adriana Pesseghini e Maura Priscila Philippo Doniani, que compartilham uma mesma convicção: questões jurídicas que envolvem família não podem ser tratadas apenas como números ou processos.</p>
+            <p>Por trás de cada caso existem pessoas, relações, histórias, filhos, patrimônio e decisões que podem produzir efeitos por muitos anos.</p>
+            <p>Por isso, nossa atuação une estratégia jurídica, proximidade e clareza. Antes de definir um caminho, buscamos compreender o contexto, ouvir o cliente e analisar os riscos e as possibilidades de cada situação.</p>
+            <p>Acreditamos em uma advocacia tecnicamente responsável, mas também acessível e humana — na qual o cliente compreenda o que está acontecendo, quais são suas opções e participe das decisões sobre o próprio caso.</p>
+            <div className="signature-line">Próximas no atendimento. Estratégicas nas decisões. Responsáveis na condução.</div>
           </div>
         </div>
       </section>
@@ -114,7 +117,7 @@ export function HomePage() {
               <span className="eyebrow">Como funciona</span>
               <h2>Um atendimento construído com <em>escuta e clareza.</em></h2>
             </div>
-            <p>O primeiro passo é entender sua realidade. A orientação parte das particularidades da sua família e do seu patrimônio.</p>
+            <p>O primeiro passo é compreender sua situação. A partir dela, analisamos o contexto, os riscos e as possibilidades para definir a orientação jurídica mais adequada ao seu caso.</p>
           </div>
           <div className="process-grid">
             {process.map((item) => (
@@ -125,7 +128,7 @@ export function HomePage() {
               </article>
             ))}
           </div>
-          <a className="button button-gold process-cta" href="#atendimento">Agendar atendimento <ArrowRight aria-hidden="true" /></a>
+          <a className="button button-gold process-cta" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">Quero analisar meu caso <ArrowRight aria-hidden="true" /></a>
         </div>
       </section>
 
@@ -137,9 +140,9 @@ export function HomePage() {
           </div>
           <ul>
             <li><Check aria-hidden="true" /><span><strong>Análise individual do caso</strong> e dos documentos relevantes.</span></li>
-            <li><Check aria-hidden="true" /><span><strong>Escuta e clareza</strong> para compreender prioridades e possibilidades.</span></li>
+            <li><Check aria-hidden="true" /><span><strong>Compreensão do contexto familiar</strong> para identificar prioridades e possibilidades.</span></li>
             <li><Check aria-hidden="true" /><span><strong>Comunicação transparente</strong> sobre riscos e próximos passos.</span></li>
-            <li><Check aria-hidden="true" /><span><strong>Visão integrada</strong> de patrimônio, imóveis, empresas, investimentos e filhos.</span></li>
+            <li><Check aria-hidden="true" /><span><strong>Visão integrada</strong> das questões familiares, patrimoniais e sucessórias envolvidas no caso.</span></li>
           </ul>
         </div>
       </section>
@@ -149,7 +152,7 @@ export function HomePage() {
           <div className="faq-intro">
             <span className="eyebrow">Dúvidas frequentes</span>
             <h2>Informação clara antes de tomar decisões.</h2>
-            <p>Reunimos respostas iniciais para questões comuns. A orientação adequada depende da análise de cada situação.</p>
+            <p>Reunimos respostas iniciais para algumas das dúvidas mais comuns. Cada situação exige análise individualizada.</p>
           </div>
           <div className="faq-list">
             {site.faqs.map((faq) => (
@@ -166,15 +169,15 @@ export function HomePage() {
         <div className="container final-cta-grid">
           <div>
             <span className="eyebrow eyebrow-light">Próximo passo</span>
-            <h2>Sua situação envolve família, patrimônio ou filhos?</h2>
-            <p>Compreender os aspectos jurídicos antes de decidir pode ajudar você a agir com mais clareza e segurança.</p>
+            <h2>Você não precisa tomar uma decisão<br />sem antes entender seus direitos.</h2>
+            <p>Conte-nos o que está acontecendo. Vamos compreender sua situação e orientar os próximos passos com clareza e estratégia.</p>
           </div>
           <div className="contact-card">
-            <Home aria-hidden="true" />
+            <MessageCircle aria-hidden="true" />
             <span>Canal de atendimento</span>
-            <h3>Dados de contato em configuração.</h3>
-            <p>O WhatsApp e os demais canais serão inseridos antes da publicação. Enquanto isso, nenhum link externo ou telefone inválido será exibido.</p>
-            <span className="pending-badge">Enviar depois</span>
+            <h3>{phoneLabel}</h3>
+            <p>Fale conosco pelo WhatsApp para compartilhar sua situação e solicitar uma análise individualizada.</p>
+            <a className="button button-gold contact-button" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">Quero analisar meu caso <ArrowRight aria-hidden="true" /></a>
           </div>
         </div>
         <div className="container legal-note">Conteúdo de caráter informativo. A análise jurídica depende das particularidades de cada caso. Não há promessa ou garantia de resultado.</div>

@@ -338,7 +338,7 @@ h2 em {
   min-height: 620px;
   border-radius: 120px 8px 8px 8px;
   overflow: hidden;
-  background: url("../assets/divorcio-hero.jpg") 72% 50% / cover no-repeat;
+  background: url("../assets/orientacao-familiar.png") 50% 50% / cover no-repeat;
   box-shadow: 0 32px 80px rgba(46, 63, 47, 0.18);
 }
 
@@ -415,11 +415,6 @@ h2 em {
   transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.service-grid article:nth-child(4),
-.service-grid article:nth-child(5) {
-  grid-column: span 3;
-}
-
 .service-grid article:hover {
   background: var(--green);
 }
@@ -480,12 +475,18 @@ h2 em {
 .institutional-photo {
   min-height: 680px;
   border-radius: 8px 8px 120px 8px;
-  background: linear-gradient(rgba(46, 63, 47, 0.08), rgba(46, 63, 47, 0.08)), url("../assets/atendimento-juridico.jpg") 50% 50% / cover no-repeat;
+  background:
+    linear-gradient(rgba(46, 63, 47, 0.04), rgba(46, 63, 47, 0.1)),
+    url("../assets/adriana-maura.jpg") 50% 32% / cover no-repeat;
   box-shadow: 0 32px 80px rgba(46, 63, 47, 0.16);
 }
 
 .institutional-copy h2 {
   font-size: clamp(2.2rem, 3.5vw, 3.45rem);
+}
+
+.institutional-copy .eyebrow {
+  font-size: 0.84rem;
 }
 
 .institutional-copy > p {
@@ -555,6 +556,10 @@ h2 em {
 
 .process-cta {
   margin-top: 38px;
+}
+
+.contact-button {
+  margin-top: 8px;
 }
 
 .care-section {
@@ -870,9 +875,6 @@ footer {
     grid-column: span 3;
   }
 
-  .service-grid article:last-child {
-    grid-column: span 6;
-  }
 }
 
 @media (max-width: 860px) {
