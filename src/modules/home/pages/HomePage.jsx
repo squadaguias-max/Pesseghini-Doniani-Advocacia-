@@ -15,7 +15,7 @@ import {
   Users
 } from "lucide-react";
 import { templateConfig as site, whatsappUrl } from "../../../config/template.config";
-import { phoneLabel } from "../../../config/project.data";
+import { ContactForm } from "../components/ContactForm";
 
 const serviceIcons = [Scale, Building2, Users, HandCoins, Landmark, HeartHandshake];
 
@@ -175,9 +175,9 @@ export function HomePage() {
           <div className="contact-card">
             <MessageCircle aria-hidden="true" />
             <span>Canal de atendimento</span>
-            <h3>{phoneLabel}</h3>
-            <p>Fale conosco pelo WhatsApp para compartilhar sua situação e solicitar uma análise individualizada.</p>
-            <a className="button button-gold contact-button" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">Quero analisar meu caso <ArrowRight aria-hidden="true" /></a>
+            <h3>Conte como podemos ajudar</h3>
+            <p>Preencha os dados abaixo. Depois do envio, você seguirá para o WhatsApp do escritório.</p>
+            <ContactForm />
           </div>
         </div>
         <div className="container legal-note">Conteúdo de caráter informativo. A análise jurídica depende das particularidades de cada caso. Não há promessa ou garantia de resultado.</div>

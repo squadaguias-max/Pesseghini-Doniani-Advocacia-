@@ -12,10 +12,11 @@ export function Footer() {
         </div>
         <p>Estratégia jurídica, proximidade e clareza para decisões que impactam sua vida e seu patrimônio.</p>
         <nav aria-label="Navegação do rodapé">
-          <a href="#inicio">Início</a>
-          <a href="#atuacao">Áreas de atuação</a>
-          <a href="#duvidas">Dúvidas frequentes</a>
-          <a href="#atendimento">Atendimento</a>
+          <a href="/#inicio">Início</a>
+          <a href="/#atuacao">Áreas de atuação</a>
+          <a href="/#duvidas">Dúvidas frequentes</a>
+          <a href="/#atendimento">Atendimento</a>
+          <a href="/politica-de-privacidade">Política de Privacidade</a>
         </nav>
       </div>
       <div className="container footer-registration">

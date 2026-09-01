@@ -18,7 +18,7 @@ export function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a className="brand" href="#inicio" aria-label="Pesseghini & Doniani — início">
+        <a className="brand" href="/" aria-label="Pesseghini & Doniani — início">
           <img className="brand-logo" src={logo} alt="Pesseghini & Doniani Advocacia" />
         </a>
         <button
@@ -32,12 +32,12 @@ export function Header() {
           {open ? <X /> : <Menu />}
         </button>
         <nav id="menu-principal" className={open ? "nav open" : "nav"} aria-label="Navegação principal">
-          <a href="#inicio" onClick={close}>Início</a>
-          <a href="#escritorio" onClick={close}>O escritório</a>
-          <a href="#atuacao" onClick={close}>Atuação</a>
-          <a href="#processo" onClick={close}>Como funciona</a>
-          <a href="#duvidas" onClick={close}>Dúvidas</a>
-          <a className="nav-cta" href="#atendimento" onClick={close}>Analisar meu caso <span aria-hidden="true">↗</span></a>
+          <a href="/#inicio" onClick={close}>Início</a>
+          <a href="/#escritorio" onClick={close}>O escritório</a>
+          <a href="/#atuacao" onClick={close}>Atuação</a>
+          <a href="/#processo" onClick={close}>Como funciona</a>
+          <a href="/#duvidas" onClick={close}>Dúvidas</a>
+          <a className="nav-cta" href="/#atendimento" onClick={close}>Analisar meu caso <span aria-hidden="true">↗</span></a>
         </nav>
       </div>
     </header>
