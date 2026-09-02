@@ -19,7 +19,20 @@ const emptyTracking = {
   submittedAt: ""
 };
 
+function formatBrazilianPhone(value) {
+  let digits = value.replace(/\D/g, "");
+  if (digits.length > 11 && digits.startsWith("55")) digits = digits.slice(2);
+  digits = digits.slice(0, 11);
+
+  if (!digits) return "";
+  if (digits.length <= 2) return `(${digits}`;
+  if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+  if (digits.length <= 10) return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+}
+
 export function ContactForm() {
+  const [phone, setPhone] = useState("");
   const [privacyAccepted, setPrivacyAccepted] = useState(false);
   const [tracking, setTracking] = useState(emptyTracking);
   const [status, setStatus] = useState("idle");
@@ -88,7 +101,20 @@ export function ContactForm() {
 
       <div className="form-field">
         <label htmlFor="phone">Telefone/WhatsApp <span aria-hidden="true">*</span></label>
-        <input id="phone" name="phone" type="tel" autoComplete="tel" inputMode="tel" maxLength="30" required />
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          autoComplete="tel"
+          inputMode="numeric"
+          placeholder="(11) 99999-9999"
+          value={phone}
+          onChange={(event) => setPhone(formatBrazilianPhone(event.target.value))}
+          pattern="\(\d{2}\) \d{4,5}-\d{4}"
+          title="Digite o telefone com DDD, por exemplo: (11) 99999-9999"
+          maxLength="15"
+          required
+        />
       </div>
 
       <div className="form-field">
