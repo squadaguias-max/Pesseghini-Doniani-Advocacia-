@@ -71,7 +71,7 @@ export function HomePage() {
             <MessageCircle aria-hidden="true" />
             <span>Canal de atendimento</span>
             <h3>Conte como podemos ajudar</h3>
-            <p>Preencha os dados abaixo. Nossa equipe entrará em contato após receber sua solicitação.</p>
+            <p>Preencha os dados abaixo. Após o envio, você seguirá para o WhatsApp do escritório.</p>
             <ContactForm />
           </div>
         </div>

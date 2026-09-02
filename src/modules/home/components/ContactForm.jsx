@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { whatsappUrl } from "../../../config/template.config";
 
 const subjectOptions = [
   "Divórcio",
@@ -100,6 +101,9 @@ export function ContactForm() {
       if (!response.ok) throw new Error(result.error || "Não foi possível enviar agora. Tente novamente.");
 
       setStatus("success");
+      window.setTimeout(() => {
+        window.location.assign(whatsappUrl());
+      }, 600);
     } catch (error) {
       setStatus("error");
       setErrorMessage(error.message || "Não foi possível enviar agora. Tente novamente.");

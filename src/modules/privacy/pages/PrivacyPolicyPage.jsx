@@ -29,6 +29,7 @@ export function PrivacyPolicyPage() {
 
         <h2>4. Compartilhamento e serviços externos</h2>
         <p>Os dados podem ser processados por fornecedores necessários à hospedagem, segurança, funcionamento e mensuração do site, sempre de acordo com a finalidade informada e com medidas de proteção adequadas. Não comercializamos dados pessoais.</p>
+        <p>Após a confirmação do envio, o site direciona você ao WhatsApp. A partir desse momento, o uso do serviço também fica sujeito aos termos e à política de privacidade do WhatsApp.</p>
 
         <h2>5. Armazenamento e segurança</h2>
         <p>Os dados são mantidos pelo período necessário para responder à solicitação, conduzir o relacionamento decorrente do contato, cumprir obrigações legais e resguardar direitos. Depois disso, podem ser eliminados ou anonimizados, quando permitido. Adotamos medidas técnicas e administrativas razoáveis para prevenir acessos não autorizados, perda, alteração ou divulgação indevida.</p>
