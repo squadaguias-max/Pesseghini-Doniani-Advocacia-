@@ -1,4 +1,5 @@
 import { saveLead } from "./db";
+import { sendLeadToGoogleSheets } from "./googleSheets";
 
 const subjects = new Set([
   "Divórcio",
@@ -59,8 +60,6 @@ export default {
     const url = new URL(request.url);
 
     if (url.pathname === "/api/leads" && request.method === "POST") {
-      if (!env.DB) return json({ error: "Serviço temporariamente indisponível." }, 503);
-
       const contentLength = Number(request.headers.get("content-length") || 0);
       if (contentLength > 16_384) return json({ error: "Dados inválidos." }, 413);
 
@@ -75,12 +74,21 @@ export default {
       if (!lead) return json({ error: "Confira os campos obrigatórios." }, 400);
 
       try {
-        await saveLead(env.DB, lead);
-        return json({ ok: true }, 201);
+        await sendLeadToGoogleSheets(lead);
       } catch (error) {
-        console.error("Lead persistence failed", error);
+        console.error("Google Sheets delivery failed", error);
         return json({ error: "Não foi possível enviar agora. Tente novamente." }, 500);
       }
+
+      if (env.DB) {
+        try {
+          await saveLead(env.DB, lead);
+        } catch (error) {
+          console.error("Lead backup persistence failed", error);
+        }
+      }
+
+      return json({ ok: true }, 201);
     }
 
     if (url.pathname.startsWith("/api/")) {

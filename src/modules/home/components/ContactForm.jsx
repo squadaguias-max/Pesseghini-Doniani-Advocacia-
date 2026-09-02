@@ -102,8 +102,8 @@ export function ContactForm() {
       <input type="hidden" name="gclid" value={tracking.gclid} readOnly />
       <input type="hidden" name="gbraid" value={tracking.gbraid} readOnly />
       <input type="hidden" name="wbraid" value={tracking.wbraid} readOnly />
-      <input type="hidden" name="page_url" value={tracking.pageUrl} readOnly />
-      <input type="hidden" name="submitted_at" value={tracking.submittedAt} readOnly />
+      <input type="hidden" name="url_pagina" value={tracking.pageUrl} readOnly />
+      <input type="hidden" name="timestamp" value={tracking.submittedAt} readOnly />
 
       <label className="privacy-consent">
         <input
