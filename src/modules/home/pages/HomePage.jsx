@@ -56,6 +56,28 @@ export function HomePage() {
         </div>
       </section>
 
+      <section className="hero-form-section" id="atendimento">
+        <div className="container hero-form-grid">
+          <div className="hero-form-intro">
+            <span className="eyebrow eyebrow-light">Próximo passo</span>
+            <h2>Você não precisa tomar uma decisão<br />sem antes entender seus direitos.</h2>
+            <p>Conte-nos o que está acontecendo. Vamos compreender sua situação e orientar os próximos passos com clareza e estratégia.</p>
+            <div className="hero-form-assurance">
+              <ShieldCheck aria-hidden="true" />
+              <span>Seus dados serão tratados com confidencialidade e usados apenas para o atendimento.</span>
+            </div>
+          </div>
+          <div className="contact-card">
+            <MessageCircle aria-hidden="true" />
+            <span>Canal de atendimento</span>
+            <h3>Conte como podemos ajudar</h3>
+            <p>Preencha os dados abaixo. Nossa equipe entrará em contato após receber sua solicitação.</p>
+            <ContactForm />
+          </div>
+        </div>
+        <div className="container legal-note">Conteúdo de caráter informativo. A análise jurídica depende das particularidades de cada caso. Não há promessa ou garantia de resultado.</div>
+      </section>
+
       <section className="opening" id="escritorio">
         <div className="container opening-grid">
           <div className="opening-copy">
@@ -165,23 +187,6 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="final-cta" id="atendimento">
-        <div className="container final-cta-grid">
-          <div>
-            <span className="eyebrow eyebrow-light">Próximo passo</span>
-            <h2>Você não precisa tomar uma decisão<br />sem antes entender seus direitos.</h2>
-            <p>Conte-nos o que está acontecendo. Vamos compreender sua situação e orientar os próximos passos com clareza e estratégia.</p>
-          </div>
-          <div className="contact-card">
-            <MessageCircle aria-hidden="true" />
-            <span>Canal de atendimento</span>
-            <h3>Conte como podemos ajudar</h3>
-            <p>Preencha os dados abaixo. Nossa equipe entrará em contato após receber sua solicitação.</p>
-            <ContactForm />
-          </div>
-        </div>
-        <div className="container legal-note">Conteúdo de caráter informativo. A análise jurídica depende das particularidades de cada caso. Não há promessa ou garantia de resultado.</div>
-      </section>
     </>
   );
 }

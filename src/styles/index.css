@@ -312,7 +312,7 @@ h2 em {
 .section-heading h2,
 .care-grid h2,
 .faq-intro h2,
-.final-cta h2 {
+.hero-form-section h2 {
   margin: 0;
   font-family: var(--display);
   font-size: clamp(2.4rem, 4vw, 4rem);
@@ -686,27 +686,67 @@ h2 em {
   line-height: 1.7;
 }
 
-.final-cta {
-  padding: 112px 0 28px;
+.hero-form-section {
+  position: relative;
+  padding: 78px 0 28px;
   overflow: hidden;
-  background: var(--green-dark);
+  border-top: 1px solid rgba(235, 217, 131, 0.34);
+  background:
+    radial-gradient(circle at 8% 20%, rgba(216, 183, 102, 0.13), transparent 34%),
+    linear-gradient(118deg, #263829 0%, var(--green-dark) 52%, #394c3b 100%);
   color: var(--ivory);
 }
 
-.final-cta-grid {
+.hero-form-section::before {
+  content: "";
+  position: absolute;
+  top: -260px;
+  right: -170px;
+  width: 560px;
+  height: 560px;
+  border: 1px solid rgba(235, 217, 131, 0.15);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-form-grid {
+  position: relative;
+  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 0.82fr;
-  gap: 90px;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 72px;
   align-items: center;
 }
 
-.final-cta h2 {
-  font-size: clamp(2.5rem, 4vw, 4.1rem);
+.hero-form-section h2 {
+  font-size: clamp(2.35rem, 3.7vw, 3.85rem);
 }
 
-.final-cta-grid > div:first-child > p {
+.hero-form-intro > p {
   max-width: 660px;
+  margin: 25px 0 0;
   color: rgba(238, 232, 220, 0.72);
+}
+
+.hero-form-assurance {
+  display: flex;
+  gap: 13px;
+  align-items: flex-start;
+  max-width: 520px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(238, 232, 220, 0.16);
+  color: rgba(238, 232, 220, 0.66);
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.hero-form-assurance svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+  margin-top: 1px;
+  color: var(--gold-light);
 }
 
 .contact-card {
@@ -747,8 +787,15 @@ h2 em {
 
 .contact-form {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
   margin-top: 26px;
+}
+
+.contact-form .privacy-consent,
+.contact-form .contact-button,
+.contact-form .form-message {
+  grid-column: 1 / -1;
 }
 
 .form-field {
@@ -1120,7 +1167,7 @@ footer {
   .process-section,
   .care-section,
   .faq-section,
-  .final-cta {
+  .hero-form-section {
     padding-top: 88px;
     padding-bottom: 88px;
   }
@@ -1138,7 +1185,7 @@ footer {
   .section-heading,
   .care-grid,
   .faq-grid,
-  .final-cta-grid {
+  .hero-form-grid {
     grid-template-columns: 1fr;
     gap: 48px;
   }
@@ -1249,7 +1296,7 @@ footer {
     padding: 72px 0;
   }
 
-  .final-cta {
+  .hero-form-section {
     padding: 72px 0 24px;
   }
 
@@ -1258,7 +1305,7 @@ footer {
   .section-heading h2,
   .care-grid h2,
   .faq-intro h2,
-  .final-cta h2 {
+  .hero-form-section h2 {
     font-size: clamp(2rem, 9vw, 2.65rem);
   }
 
@@ -1320,6 +1367,16 @@ footer {
 
   .contact-card {
     padding: 28px;
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form .privacy-consent,
+  .contact-form .contact-button,
+  .contact-form .form-message {
+    grid-column: auto;
   }
 
   .privacy-page {
