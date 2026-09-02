@@ -59,9 +59,9 @@ export function HomePage() {
       <section className="hero-form-section" id="atendimento">
         <div className="container hero-form-grid">
           <div className="hero-form-intro">
-            <span className="eyebrow eyebrow-light">Próximo passo</span>
-            <h2>Você não precisa tomar uma decisão<br />sem antes entender seus direitos.</h2>
-            <p>Conte-nos o que está acontecendo. Vamos compreender sua situação e orientar os próximos passos com clareza e estratégia.</p>
+            <span className="eyebrow eyebrow-light">Atendimento inicial</span>
+            <h2>Dê o primeiro passo com<br />mais clareza e segurança.</h2>
+            <p>Preencha seus dados para que nossa equipe identifique o assunto do contato. Após o envio, você seguirá para o WhatsApp para continuar o atendimento.</p>
             <div className="hero-form-assurance">
               <ShieldCheck aria-hidden="true" />
               <span>Seus dados serão tratados com confidencialidade e usados apenas para o atendimento.</span>
@@ -69,9 +69,9 @@ export function HomePage() {
           </div>
           <div className="contact-card">
             <MessageCircle aria-hidden="true" />
-            <span>Canal de atendimento</span>
-            <h3>Conte como podemos ajudar</h3>
-            <p>Preencha os dados abaixo. Após o envio, você seguirá para o WhatsApp do escritório.</p>
+            <span>Formulário de contato</span>
+            <h3>Entre em contato</h3>
+            <p>Informe seus dados e selecione o assunto para iniciar o atendimento.</p>
             <ContactForm />
           </div>
         </div>
