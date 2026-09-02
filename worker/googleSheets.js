@@ -1,4 +1,4 @@
-const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbzlT-EZBEee7xgVAThnJNzo5HBTWV2ARfQD4bcxoMAaqG1XzE5URuqWhQzRy3HeJrxR/exec";
+const GOOGLE_SHEETS_WEBHOOK_URL = "https://script.google.com/macros/s/AKfycby_sPr_ot6AD0al-5cjRX3e8sutjhh9H50UIfqAmDO5V0LZHvwdM7lA0U0hOzQYpZpxoA/exec";
 
 function sheetPayload(lead) {
   return {
