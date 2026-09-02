@@ -14,7 +14,7 @@ import {
   ShieldCheck,
   Users
 } from "lucide-react";
-import { templateConfig as site, whatsappUrl } from "../../../config/template.config";
+import { templateConfig as site } from "../../../config/template.config";
 import { ContactForm } from "../components/ContactForm";
 
 const serviceIcons = [Scale, Building2, Users, HandCoins, Landmark, HeartHandshake];
@@ -47,7 +47,7 @@ export function HomePage() {
           <h1>Quando família, filhos e patrimônio estão envolvidos, <em>não é fácil saber o que fazer.</em></h1>
           <p>{site.hero.description}</p>
           <div className="hero-actions">
-            <a className="button button-gold" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
+            <a className="button button-gold" href="#atendimento">
               {site.hero.cta} <ArrowRight aria-hidden="true" />
             </a>
             <a className="text-link light-link" href="#atuacao">Entenda como podemos orientar</a>
@@ -62,7 +62,7 @@ export function HomePage() {
             <span className="eyebrow">Antes de decidir</span>
             <h2>Em questões de família, uma decisão tomada hoje <em>pode ter efeitos por muito tempo.</em></h2>
             <p>Filhos, patrimônio, alimentos, moradia e relações construídas ao longo dos anos podem estar envolvidos em uma mesma situação. Por isso, antes de agir, é importante compreender seus direitos, os riscos e os caminhos jurídicos possíveis.</p>
-            <a className="button button-dark" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">Quero analisar meu caso <ArrowRight aria-hidden="true" /></a>
+            <a className="button button-dark" href="#atendimento">Quero analisar meu caso <ArrowRight aria-hidden="true" /></a>
           </div>
           <div className="opening-visual" role="img" aria-label="Pessoa organizando documentos com calma em um ambiente profissional">
             <div className="visual-caption">
@@ -88,7 +88,7 @@ export function HomePage() {
                 <span className="service-icon">{createElement(serviceIcons[index] || Scale)}</span>
                 <h3>{service.title}</h3>
                 <p>{service.description}</p>
-                <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer" aria-label={`Solicitar análise sobre ${service.title}`}>Solicitar análise <ArrowRight aria-hidden="true" /></a>
+                <a href="#atendimento" aria-label={`Solicitar análise sobre ${service.title}`}>Solicitar análise <ArrowRight aria-hidden="true" /></a>
               </article>
             ))}
           </div>
@@ -128,7 +128,7 @@ export function HomePage() {
               </article>
             ))}
           </div>
-          <a className="button button-gold process-cta" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">Quero analisar meu caso <ArrowRight aria-hidden="true" /></a>
+          <a className="button button-gold process-cta" href="#atendimento">Quero analisar meu caso <ArrowRight aria-hidden="true" /></a>
         </div>
       </section>
 
@@ -176,7 +176,7 @@ export function HomePage() {
             <MessageCircle aria-hidden="true" />
             <span>Canal de atendimento</span>
             <h3>Conte como podemos ajudar</h3>
-            <p>Preencha os dados abaixo. Depois do envio, você seguirá para o WhatsApp do escritório.</p>
+            <p>Preencha os dados abaixo. Nossa equipe entrará em contato após receber sua solicitação.</p>
             <ContactForm />
           </div>
         </div>
