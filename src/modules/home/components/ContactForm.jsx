@@ -19,6 +19,25 @@ const emptyTracking = {
   submittedAt: ""
 };
 
+const adParameterKeys = ["gclid", "gbraid", "wbraid"];
+
+function captureAdParameters() {
+  const params = new URLSearchParams(window.location.search);
+  const captured = {};
+
+  adParameterKeys.forEach((key) => {
+    const valueFromUrl = params.get(key);
+    try {
+      if (valueFromUrl) window.localStorage.setItem(key, valueFromUrl);
+      captured[key] = valueFromUrl || window.localStorage.getItem(key) || "";
+    } catch {
+      captured[key] = valueFromUrl || "";
+    }
+  });
+
+  return captured;
+}
+
 function formatBrazilianPhone(value) {
   let digits = value.replace(/\D/g, "");
   if (digits.length > 11 && digits.startsWith("55")) digits = digits.slice(2);
@@ -39,11 +58,9 @@ export function ContactForm() {
   const [errorMessage, setErrorMessage] = useState("");
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
+    const adParameters = captureAdParameters();
     setTracking({
-      gclid: params.get("gclid") || "",
-      gbraid: params.get("gbraid") || "",
-      wbraid: params.get("wbraid") || "",
+      ...adParameters,
       pageUrl: window.location.href,
       submittedAt: new Date().toISOString()
     });
@@ -63,6 +80,7 @@ export function ContactForm() {
     const payload = {
       fullName: formData.get("fullName"),
       phone: formData.get("phone"),
+      email: formData.get("email"),
       subject: formData.get("subject"),
       privacyAccepted,
       gclid: tracking.gclid,
@@ -92,6 +110,17 @@ export function ContactForm() {
     }
   }
 
+  if (status === "success") {
+    return (
+      <div className="form-confirmation" role="status">
+        <p className="form-message form-message-success">Recebemos seus dados, nossa equipe entra em contato em breve.</p>
+        <a className="button button-gold contact-button" href={whatsappUrl()} target="_blank" rel="noopener noreferrer">
+          Falar agora pelo WhatsApp <ArrowRight aria-hidden="true" />
+        </a>
+      </div>
+    );
+  }
+
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
       <div className="form-field">
@@ -115,6 +144,11 @@ export function ContactForm() {
           maxLength="15"
           required
         />
+      </div>
+
+      <div className="form-field">
+        <label htmlFor="email">E-mail <span className="optional-label">(opcional)</span></label>
+        <input id="email" name="email" type="email" autoComplete="email" maxLength="254" />
       </div>
 
       <div className="form-field">
@@ -143,13 +177,10 @@ export function ContactForm() {
       </label>
 
       <button className="button button-gold contact-button" type="submit" disabled={!privacyAccepted || status === "submitting" || status === "success"}>
-        {status === "submitting" ? "Enviando..." : "Quero conversar"}
+        {status === "submitting" ? "Enviando..." : "Quero analisar meu caso"}
         {status !== "submitting" && <ArrowRight aria-hidden="true" />}
       </button>
 
-      {status === "success" && (
-        <p className="form-message form-message-success" role="status">Recebemos seus dados, nossa equipe entra em contato em breve.</p>
-      )}
       {status === "error" && (
         <p className="form-message form-message-error" role="alert">{errorMessage}</p>
       )}

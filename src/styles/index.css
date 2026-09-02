@@ -766,6 +766,11 @@ h2 em {
   color: var(--gold-light);
 }
 
+.form-field label .optional-label {
+  color: rgba(238, 232, 220, 0.58);
+  font-weight: 400;
+}
+
 .form-field input,
 .form-field select {
   width: 100%;
@@ -817,6 +822,12 @@ h2 em {
   width: 100%;
   margin-top: 0;
   cursor: pointer;
+}
+
+.form-confirmation {
+  display: grid;
+  gap: 18px;
+  margin-top: 26px;
 }
 
 .contact-form .contact-button:disabled {

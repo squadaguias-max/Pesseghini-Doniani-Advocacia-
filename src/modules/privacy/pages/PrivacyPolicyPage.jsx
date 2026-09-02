@@ -14,7 +14,7 @@ export function PrivacyPolicyPage() {
         <a className="privacy-back" href="/">← Voltar ao site</a>
         <span className="eyebrow">Privacidade e proteção de dados</span>
         <h1>Política de Privacidade</h1>
-        <p className="privacy-updated">Última atualização: 1º de setembro de 2026.</p>
+        <p className="privacy-updated">Última atualização: 2 de setembro de 2026.</p>
 
         <p>A Pesseghini & Doniani Advocacia respeita a sua privacidade e trata dados pessoais de acordo com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD). Esta política explica como os dados enviados pelo formulário deste site são utilizados.</p>
 
@@ -22,7 +22,7 @@ export function PrivacyPolicyPage() {
         <p>A Pesseghini & Doniani Advocacia é responsável pelas decisões sobre o tratamento dos dados coletados neste site. Solicitações relacionadas à privacidade podem ser feitas pelo <a href={whatsappUrl()} target="_blank" rel="noopener noreferrer">WhatsApp do escritório</a>.</p>
 
         <h2>2. Dados coletados</h2>
-        <p>Ao enviar o formulário, coletamos nome completo, telefone/WhatsApp e o assunto selecionado. Também registramos automaticamente, quando disponíveis, os identificadores de campanha gclid, gbraid e wbraid, a URL da página e a data e hora do envio.</p>
+        <p>Ao enviar o formulário, coletamos nome completo, telefone/WhatsApp, o assunto selecionado e, caso informado, o e-mail. Também registramos automaticamente, quando disponíveis, os identificadores de campanha gclid, gbraid e wbraid, a URL da página e a data e hora do envio. Os identificadores de campanha podem ser guardados no navegador para preservar a atribuição até o envio.</p>
         <p>O formulário não solicita texto livre, CPF, renda ou endereço.</p>
 
         <h2>3. Finalidades e bases legais</h2>

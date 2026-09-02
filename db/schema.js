@@ -4,6 +4,7 @@ export const leads = sqliteTable("leads", {
   id: integer("id").primaryKey({ autoIncrement: true }),
   fullName: text("full_name").notNull(),
   phone: text("phone").notNull(),
+  email: text("email"),
   subject: text("subject").notNull(),
   privacyAccepted: integer("privacy_accepted", { mode: "boolean" }).notNull(),
   gclid: text("gclid"),

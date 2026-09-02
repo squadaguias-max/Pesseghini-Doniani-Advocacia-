@@ -29,10 +29,12 @@ function validateLead(body) {
   const fullName = typeof body.fullName === "string" ? body.fullName.trim() : "";
   const phone = typeof body.phone === "string" ? body.phone.trim() : "";
   const phoneDigits = phone.replace(/\D/g, "");
+  const email = typeof body.email === "string" ? body.email.trim() : "";
   const subject = typeof body.subject === "string" ? body.subject.trim() : "";
 
   if (fullName.length < 3 || fullName.length > 140) return null;
   if (phone.length > 30 || phoneDigits.length < 10 || phoneDigits.length > 13) return null;
+  if (email && (email.length > 254 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))) return null;
   if (!subjects.has(subject) || body.privacyAccepted !== true) return null;
 
   let pageUrl;
@@ -46,6 +48,7 @@ function validateLead(body) {
   return {
     fullName,
     phone,
+    email: email || null,
     subject,
     gclid: cleanOptional(body.gclid),
     gbraid: cleanOptional(body.gbraid),
@@ -56,7 +59,7 @@ function validateLead(body) {
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     if (url.pathname === "/api/leads" && request.method === "POST") {
@@ -73,20 +76,17 @@ export default {
       const lead = validateLead(body);
       if (!lead) return json({ error: "Confira os campos obrigatórios." }, 400);
 
-      try {
-        await sendLeadToGoogleSheets(lead);
-      } catch (error) {
-        console.error("Google Sheets delivery failed", error);
-        return json({ error: "Não foi possível enviar agora. Tente novamente." }, 500);
-      }
-
+      const deliveries = [
+        sendLeadToGoogleSheets(lead).catch((error) => {
+          console.error("Google Sheets delivery failed", error);
+        })
+      ];
       if (env.DB) {
-        try {
-          await saveLead(env.DB, lead);
-        } catch (error) {
+        deliveries.push(saveLead(env.DB, lead).catch((error) => {
           console.error("Lead backup persistence failed", error);
-        }
+        }));
       }
+      ctx.waitUntil(Promise.all(deliveries));
 
       return json({ ok: true }, 201);
     }

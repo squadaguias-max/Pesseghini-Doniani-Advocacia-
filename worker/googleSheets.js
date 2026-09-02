@@ -4,6 +4,7 @@ function sheetPayload(lead) {
   return {
     nome: lead.fullName,
     telefone: lead.phone,
+    email: lead.email || "",
     assunto: lead.subject,
     gclid: lead.gclid || "",
     gbraid: lead.gbraid || "",
@@ -15,10 +16,9 @@ function sheetPayload(lead) {
 
 export async function sendLeadToGoogleSheets(lead) {
   const payload = sheetPayload(lead);
-  const query = new URLSearchParams(payload);
-  const response = await fetch(`${GOOGLE_SHEETS_WEBHOOK_URL}?${query.toString()}`, {
+  const response = await fetch(GOOGLE_SHEETS_WEBHOOK_URL, {
     method: "POST",
-    headers: { "Content-Type": "application/json; charset=utf-8" },
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
     body: JSON.stringify(payload),
     redirect: "follow",
     signal: AbortSignal.timeout(30_000)

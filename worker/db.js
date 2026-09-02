@@ -3,6 +3,7 @@ export async function saveLead(db, lead) {
     INSERT INTO leads (
       full_name,
       phone,
+      email,
       subject,
       privacy_accepted,
       gclid,
@@ -10,10 +11,11 @@ export async function saveLead(db, lead) {
       wbraid,
       page_url,
       submitted_at
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `).bind(
     lead.fullName,
     lead.phone,
+    lead.email,
     lead.subject,
     1,
     lead.gclid,
