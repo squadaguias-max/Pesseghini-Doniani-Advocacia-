@@ -80,7 +80,6 @@ export function ContactForm() {
     const payload = {
       fullName: formData.get("fullName"),
       phone: formData.get("phone"),
-      email: formData.get("email"),
       subject: formData.get("subject"),
       privacyAccepted,
       gclid: tracking.gclid,
@@ -141,11 +140,6 @@ export function ContactForm() {
           maxLength="15"
           required
         />
-      </div>
-
-      <div className="form-field">
-        <label htmlFor="email">E-mail <span className="optional-label">(opcional)</span></label>
-        <input id="email" name="email" type="email" autoComplete="email" maxLength="254" />
       </div>
 
       <div className="form-field">

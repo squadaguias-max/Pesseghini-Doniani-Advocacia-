@@ -21,7 +21,7 @@ export function PrivacyPolicyPage() {
         <p>A Pesseghini & Doniani Advocacia é responsável pelas decisões sobre o tratamento dos dados coletados neste site. Solicitações relacionadas à privacidade podem ser feitas pelo <a href="/#atendimento">formulário de contato</a>.</p>
 
         <h2>2. Dados coletados</h2>
-        <p>Ao enviar o formulário, coletamos nome completo, telefone/WhatsApp, o assunto selecionado e, caso informado, o e-mail. Também registramos automaticamente, quando disponíveis, os identificadores de campanha gclid, gbraid e wbraid, a URL da página e a data e hora do envio. Os identificadores de campanha podem ser guardados no navegador para preservar a atribuição até o envio.</p>
+        <p>Ao enviar o formulário, coletamos nome completo, telefone/WhatsApp e o assunto selecionado. Também registramos automaticamente, quando disponíveis, os identificadores de campanha gclid, gbraid e wbraid, a URL da página e a data e hora do envio. Os identificadores de campanha podem ser guardados no navegador para preservar a atribuição até o envio.</p>
         <p>O formulário não solicita texto livre, CPF, renda ou endereço.</p>
 
         <h2>3. Finalidades e bases legais</h2>
